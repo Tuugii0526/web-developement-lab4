@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tuguldurn@lab4:~$</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #0d1117;
+        color: #c9d1d9;
+        font-family: monospace;
+        line-height: 1.6;
+      }
+
+      a {
+        color: #58a6ff;
+      }
+
+      kbd {
+        color: #3fb950;
+      }
+
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-top: 0;
+        color: #fff;
+      }
+
+      /* Header + navigation: Flexbox */
+      header,
+      footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 16px 24px;
+        background: #161b22;
+      }
+
+      nav {
+        display: flex;
+        gap: 12px;
+      }
+
+      /* Page layout: Grid (main + sidebar) */
+      .page {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      main,
+      aside {
+        display: grid;
+        gap: 20px;
+        align-content: start;
+      }
+
+      section {
+        padding: 20px;
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 10px;
+      }
+
+      /* Cards: Grid with 3 columns */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 16px;
+        background: #0d1117;
+        border: 1px solid #30363d;
+        border-radius: 10px;
+      }
+
+      article p {
+        margin: 0;
+      }
+
+      blockquote {
+        margin: 0;
+        padding-left: 12px;
+        border-left: 3px solid #3fb950;
+      }
+
+      form {
+        display: grid;
+        gap: 12px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <pre><kbd>tuguldurn@lab4:~$ whoami</kbd>
+Намжилдорж Төгөлдөр</pre>
+      <nav aria-label="Хуудасны цэс">
+        <a href="#about">~/about</a>
+        <a href="#skills">~/skills</a>
+        <a href="#favorites">~/favorites</a>
+        <a href="#faq">~/faq</a>
+        <a href="#contact">~/contact</a>
+      </nav>
+    </header>
+
+    <div class="page">
+      <main>
+        <section id="about">
+          <h1>Сайн уу 👋</h1>
+          <p>
+            Намайг <strong>Намжилдорж Төгөлдөр</strong> гэдэг. Мэдээллийн
+            технологийн сургуульд <mark>3-р курст</mark> сурдаг. Шинэ зүйл
+            суралцах, бусдад сурсан мэдсэнээ хуваалцах дуртай 😇. Танилцахад
+            таатай байна. ✨
+          </p>
+        </section>
+
+        <section id="skills">
+          <h2>🧰 Юу мэддэг вэ?</h2>
+          <div class="cards">
+            <article>
+              <h3><kbd>./html_css</kbd></h3>
+              <p>Вэб хуудасны бүтэц, загварыг хийхэд ашигладаг.</p>
+              <meter min="0" max="10" value="6">6/10</meter>
+            </article>
+            <article>
+              <h3><kbd>./git_github</kbd></h3>
+              <p>
+                Кодоо байршуулахад ашигладаг.
+                <mark>GitHub Pages</mark> дээр кодоо үнэгүй байршуулдаг.
+              </p>
+              <meter min="0" max="10" value="6">6/10</meter>
+            </article>
+            <article>
+              <h3><kbd>./cpp</kbd></h3>
+              <p>
+                Програмчлалын бодлого бодох дуртай. Шинэ бүтэц, алгоритмаар
+                асуудал шийдэх нь сонирхолтой.
+              </p>
+              <meter min="0" max="10" value="6">6/10</meter>
+            </article>
+          </div>
+        </section>
+
+        <section id="favorites">
+          <h2>⭐ Дуртай зүйлс</h2>
+          <div class="cards">
+            <article>
+              <h3><kbd>language/</kbd></h3>
+              <p>Дуртай хэл: <strong>C++</strong></p>
+            </article>
+            <article>
+              <h3><kbd>frameworks/</kbd></h3>
+              <p>React · Vue · Next.js · Nuxt</p>
+            </article>
+            <article>
+              <h3><kbd>security/</kbd></h3>
+              <p>CTF тэмцээн</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="faq">
+          <h2>💬 Асуулт хариулт</h2>
+          <details>
+            <summary>Яагаад вэб хөгжүүлэлт сонирхдог вэ?</summary>
+            <p>
+              Код бичээд хөтөч дээр үр дүнг нь шууд харж болдог нь надад
+              таалагддаг.
+            </p>
+          </details>
+          <details>
+            <summary>Одоо юу сурч байна вэ?</summary>
+            <p>
+              Япон хэл <strong>dekiru nihongo</strong> номноос сурж байгаа.
+              Ирэх 12 сард N5 шалгалт өгнө.
+            </p>
+          </details>
+          <details>
+            <summary>Ойрын зорилго</summary>
+            <p>OverTheWire-ийн CTF дасгалуудыг шийдэх зорилготой.</p>
+          </details>
+        </section>
+      </main>
+
+      <aside>
+        <section>
+          <h2><kbd>$ fortune</kbd></h2>
+          <blockquote>“Оролдлого ихт оройд нь”</blockquote>
+        </section>
+
+        <section id="contact">
+          <h2>📬 Холбоо барих</h2>
+          <p>
+            <a
+              href="https://github.com/Tuugii0526"
+              target="_blank"
+              rel="noopener"
+              >github.com/Tuugii0526</a
+            >
+          </p>
+          <form onsubmit="return false;">
+            <label>Нэр: <input type="text" name="name" /></label>
+            <label>Захиа: <textarea name="msg" rows="3"></textarea></label>
+            <button type="submit">Явуулах</button>
+          </form>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <pre><kbd>$ exit</kbd>
+logout</pre>
+      <small>© 2026 Намжилдорж Төгөлдөр</small>
+      <a href="#about">↑ дээш гарах</a>
+    </footer>
+  </body>
+</html>
